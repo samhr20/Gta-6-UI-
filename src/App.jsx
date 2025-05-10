@@ -62,20 +62,16 @@ function App() {
         delay: -1.2,
         ease: 'Expo.easeInOut'
       })
-      gsap.matchMedia().add("(min-width: 640px)", () => {
-        gsap.to('.character', {
-          rotate: 5,
-          bottom: '-455px',
-          scale: '0.75',
-          duration: 2,
-          delay: -0.65,
-          x: '-50%',
-          ease: 'Expo.easeInOut',
-        });
-      });
+    
       gsap.to('.text', {
         rotate: 0,
         scale: '1.2',
+        duration: 2,
+        delay: -0.65,
+        ease: 'Expo.easeInOut',
+      })
+      gsap.to('.character', {
+         marginBottom: '0' ,
         duration: 2,
         delay: -0.65,
         ease: 'Expo.easeInOut',
@@ -112,7 +108,7 @@ function App() {
         trigger:'.downloadSection',
         scroller:'body',
         start:'top 50%',
-        end:'top -15%',
+        end:'top -1%',
         scrub:4
       }
 
@@ -183,7 +179,7 @@ function App() {
                 <h1 className="sm:text-8xl text-6xl leading-none  ml-16 sm:ml-20">theft</h1>
                 <h1 className="sm:text-8xl text-6xl  leading-none sm:-ml-48">auto</h1>
               </div>
-              <img className='character absolute scale-[0.9] sm:rotate-0 -bottom-[150px] sm:-bottom-[1055px]  sm:-scale-[1.5] left-[10%] sm:left-1/2 sm:-translate-x-1/2 ' src="./girlbg.png" alt="" />
+              <img className='character absolute -mb-96 sm:-bottom-[40%] sm:left-1/2 sm:-translate-x-1/2 sm:rotate-[5deg] sm:scale-[1]  -bottom-[20%] scale-[0.88] -right-6' src="./girlbg.png" alt="" />
             </div>
             {/* BOTTOM BAR */}
             <div className=' bottomBar opacity-0  text-white absolute bottom-0 left-0 w-full px-4 py-2 sm:px-10 sm:py-4 bg-gradient-to-t from-black to-transparent'>
@@ -195,14 +191,17 @@ function App() {
             </div>
           </div>
           {/* SECOND SECTION */}
-          <div className='downloadSection opacity-0 text-white h-screen relative py-9'>
+          <div className='downloadSection opacity-0 text-white relative py-9'>
             <div className='flex sm:flex-row flex-col items-center justify-center '>
               <img className=' scale-[0.85] sm:scale-[0.9] top-2.5' src="imag.png" alt="" />
               <div className='sm:px-18 px-6 py-6  sm:w-[40%] sm:py-16'>
                 <h3 className='text-5xl sm:text-7xl'>STILL RUNNING , <br /> NOT HUNTING</h3>
                 <p className='mt-7 font-[poppins] text-[10px] sm:text-[12px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque repellendus reiciendis itaque aspernatur illum ullam excepturi nemo ipsa est maiores nihil ea sed perferendis rerum aliquam, labore quas pariatur, quos adipisci culpa omnis. Non, eligendi!.</p>
-                <p className='mt-3 font-[poppins] text-[10px] sm:text-[12px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque repellendus reiciendis itaque aspernatur illum ullam excepturi nemo ipsa est maiores nihil ea sed perferendis rerum aliquam, labore quas pariatur, quos adipisci culpa omnis. Non, eligendi!.</p>
-                <button className='mt-6 sm:ml-2 bg-yellow-500 text-black   w-full sm:w-[75%] text-4xl p-2 rounded-sm'>Download now</button>
+                <p className='mt-3 font-[poppins] text-[10px] sm:text-[12px]'>Full code of this landing page is on my github profile , you can access the code from button below</p>
+                
+                <a href="https://github.com/samhr20/Gta-6-UI-">
+                <button  className='mt-6 sm:ml-2 bg-yellow-500 text-black   w-full sm:w-[75%] text-4xl p-2 rounded-sm'>Download now</button>
+                </a>
               </div>
             </div>
           </div>
